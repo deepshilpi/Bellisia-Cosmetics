@@ -140,8 +140,8 @@ class HeaderComponent extends HTMLElement {
     const updateBlurEffect = () => {
       if (!enableBlur) return;
       
-      // Don't apply blur if header is transparent
-      if (this.hasAttribute('transparent')) {
+      // Don't apply blur if header is transparent or not-sticky
+      if (this.hasAttribute('transparent') || this.getAttribute('transparent') === 'not-sticky') {
         this.style.background = '';
         this.style.backdropFilter = '';
         this.style.webkitBackdropFilter = '';
