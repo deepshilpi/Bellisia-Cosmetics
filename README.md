@@ -1,4 +1,4 @@
-# bellisia Shopify Theme V1.0.0 by Gentmind
+# bellisia cosmetics Shopify Theme V1.0.0 by Gentmind
 
 A premium, feature-rich Shopify theme designed for modern e-commerce stores with advanced functionality and beautiful design.
 
