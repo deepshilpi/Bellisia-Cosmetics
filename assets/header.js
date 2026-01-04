@@ -135,56 +135,70 @@ class HeaderComponent extends HTMLElement {
     const enableBlur = this.getAttribute('data-enable-sticky-blur') === 'true';
     const blurIntensity = this.getAttribute('data-sticky-blur-intensity') || '15';
     const blurOpacity = this.getAttribute('data-sticky-blur-opacity') || '0.85';
-    
+
+    const applyBlur = () => {
+      this.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
+      this.style.backdropFilter = `blur(${blurIntensity}px)`;
+      this.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
+
+      const rowGroup = this.querySelector('.row-group');
+      if (rowGroup) {
+        rowGroup.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
+        rowGroup.style.backdropFilter = `blur(${blurIntensity}px)`;
+        rowGroup.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
+      }
+    };
+
+    const clearBlur = () => {
+      this.style.background = '';
+      this.style.backdropFilter = '';
+      this.style.webkitBackdropFilter = '';
+
+      const rowGroup = this.querySelector('.row-group');
+      if (rowGroup) {
+        rowGroup.style.background = '';
+        rowGroup.style.backdropFilter = '';
+        rowGroup.style.webkitBackdropFilter = '';
+      }
+    };
+
     // Add blur effect when header becomes sticky
     const updateBlurEffect = () => {
-      if (!enableBlur) return;
-      
-      // Don't apply blur if header is transparent or not-sticky
-      if (this.hasAttribute('transparent') || this.getAttribute('transparent') === 'not-sticky') {
-        this.style.background = '';
-        this.style.backdropFilter = '';
-        this.style.webkitBackdropFilter = '';
-        
-        const rowGroup = this.querySelector('.row-group');
-        if (rowGroup) {
-          rowGroup.style.background = '';
-          rowGroup.style.backdropFilter = '';
-          rowGroup.style.webkitBackdropFilter = '';
-        }
+      if (!enableBlur) {
+        clearBlur();
         return;
       }
-      
-      if (this.stickyMode === 'always' || this.dataset.stickyState === 'active') {
-        this.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
-        this.style.backdropFilter = `blur(${blurIntensity}px)`;
-        this.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
-        
-        // Also apply to row-group
-        const rowGroup = this.querySelector('.row-group');
-        if (rowGroup) {
-          rowGroup.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
-          rowGroup.style.backdropFilter = `blur(${blurIntensity}px)`;
-          rowGroup.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
-        }
-      } else {
-        // Remove blur effect when not sticky
-        this.style.background = '';
-        this.style.backdropFilter = '';
-        this.style.webkitBackdropFilter = '';
-        
-        const rowGroup = this.querySelector('.row-group');
-        if (rowGroup) {
-          rowGroup.style.background = '';
-          rowGroup.style.backdropFilter = '';
-          rowGroup.style.webkitBackdropFilter = '';
-        }
+
+      const transparentMode = this.getAttribute('transparent');
+      const isTransparentAlways = transparentMode === 'always';
+      const isTransparentNotSticky = transparentMode === 'not-sticky';
+      const scrollDirection = this.dataset.scrollDirection;
+      const isScrolled = scrollDirection
+        ? scrollDirection !== 'none'
+        : (document.scrollingElement?.scrollTop ?? 0) > 0;
+      const isStickyActive =
+        this.dataset.stickyState === 'active' ||
+        (this.stickyMode === 'always' && isScrolled);
+
+      const shouldApplyBlur =
+        !isTransparentAlways &&
+        (!isTransparentNotSticky || isStickyActive) &&
+        (this.stickyMode === 'always' || this.dataset.stickyState === 'active');
+
+      if (shouldApplyBlur) {
+        applyBlur();
+        return;
       }
+
+      clearBlur();
     };
 
     // Update blur effect on scroll state changes
     const observer = new MutationObserver(updateBlurEffect);
-    observer.observe(this, { attributes: true, attributeFilter: ['data-sticky-state', 'transparent'] });
+    observer.observe(this, {
+      attributes: true,
+      attributeFilter: ['data-sticky-state', 'data-scroll-direction', 'transparent'],
+    });
     
     // Initial update
     updateBlurEffect();

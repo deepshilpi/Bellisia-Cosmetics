@@ -477,16 +477,18 @@
 
   /* Enhanced blur effect for sticky header - Dynamic settings */
   {% if section.settings.enable_sticky_blur %}
-    #header-component[data-sticky-type='always']:not([transparent]):not([transparent='not-sticky']),
-    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active']:not([transparent]):not([transparent='not-sticky']) {
+    #header-component[data-sticky-type='always']:not([transparent]),
+    #header-component[data-sticky-type='always'][transparent='not-sticky'][data-scroll-direction]:not([data-scroll-direction='none']),
+    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active'] {
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
     }
 
     /* Additional blur for the row-group inside sticky header */
-    #header-component[data-sticky-type='always']:not([transparent]):not([transparent='not-sticky']) .row-group,
-    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active']:not([transparent]):not([transparent='not-sticky']) .row-group {
+    #header-component[data-sticky-type='always']:not([transparent]) .row-group,
+    #header-component[data-sticky-type='always'][transparent='not-sticky'][data-scroll-direction]:not([data-scroll-direction='none']) .row-group,
+    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active'] .row-group {
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
@@ -511,13 +513,6 @@
   .header-section:has(.header[data-sticky-type='scroll-up'][data-sticky-state='active']) {
     view-transition-name: header-component;
     animation: header-sticky-slide-down var(--animation-speed-slowest) forwards;
-    
-    /* Additional blur for active sticky state */
-    .header {
-      background: rgba(255, 255, 255, 0.9) !important;
-      backdrop-filter: blur(20px) !important;
-      -webkit-backdrop-filter: blur(20px) !important;
-    }
 /*
     .header:has(.header__row--bottom) .row-group--shadow .header__row--bottom {
       box-shadow: rgba(var(--color-shadow-rgb) / var(--opacity-20)) 0rem 0.2rem 2rem 0rem;
