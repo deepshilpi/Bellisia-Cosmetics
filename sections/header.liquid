@@ -469,15 +469,6 @@
     z-index: var(--layer-raised);
     transition: height var(--animation-speed-slowest);
     width: 100%;
-
-      background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-    &:has(.header[data-sticky-type]) {
-      position: sticky;
-      z-index: var(--layer-sticky);
-
-    }
   }
 
   #header-group:has(#header-component[data-sticky-type]) {
