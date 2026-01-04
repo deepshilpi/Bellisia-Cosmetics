@@ -140,6 +140,21 @@ class HeaderComponent extends HTMLElement {
     const updateBlurEffect = () => {
       if (!enableBlur) return;
       
+      // Don't apply blur if header is transparent
+      if (this.hasAttribute('transparent')) {
+        this.style.background = '';
+        this.style.backdropFilter = '';
+        this.style.webkitBackdropFilter = '';
+        
+        const rowGroup = this.querySelector('.row-group');
+        if (rowGroup) {
+          rowGroup.style.background = '';
+          rowGroup.style.backdropFilter = '';
+          rowGroup.style.webkitBackdropFilter = '';
+        }
+        return;
+      }
+      
       if (this.stickyMode === 'always' || this.dataset.stickyState === 'active') {
         this.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
         this.style.backdropFilter = `blur(${blurIntensity}px)`;
@@ -169,7 +184,7 @@ class HeaderComponent extends HTMLElement {
 
     // Update blur effect on scroll state changes
     const observer = new MutationObserver(updateBlurEffect);
-    observer.observe(this, { attributes: true, attributeFilter: ['data-sticky-state'] });
+    observer.observe(this, { attributes: true, attributeFilter: ['data-sticky-state', 'transparent'] });
     
     // Initial update
     updateBlurEffect();

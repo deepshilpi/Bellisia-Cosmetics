@@ -477,16 +477,16 @@
 
   /* Enhanced blur effect for sticky header - Dynamic settings */
   {% if section.settings.enable_sticky_blur %}
-    #header-component[data-sticky-type='always'],
-    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active'] {
+    #header-component[data-sticky-type='always']:not([transparent]),
+    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active']:not([transparent]) {
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
     }
 
     /* Additional blur for the row-group inside sticky header */
-    #header-component[data-sticky-type='always'] .row-group,
-    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active'] .row-group {
+    #header-component[data-sticky-type='always']:not([transparent]) .row-group,
+    #header-component[data-sticky-type='scroll-up'][data-sticky-state='active']:not([transparent]) .row-group {
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
