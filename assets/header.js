@@ -144,8 +144,6 @@ class HeaderComponent extends HTMLElement {
         this.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
         this.style.backdropFilter = `blur(${blurIntensity}px)`;
         this.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
-        this.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-        this.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
         
         // Also apply to row-group
         const rowGroup = this.querySelector('.row-group');
@@ -153,24 +151,18 @@ class HeaderComponent extends HTMLElement {
           rowGroup.style.background = `rgba(255, 255, 255, ${blurOpacity})`;
           rowGroup.style.backdropFilter = `blur(${blurIntensity}px)`;
           rowGroup.style.webkitBackdropFilter = `blur(${blurIntensity}px)`;
-          rowGroup.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-          rowGroup.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
         }
       } else {
         // Remove blur effect when not sticky
         this.style.background = '';
         this.style.backdropFilter = '';
         this.style.webkitBackdropFilter = '';
-        this.style.borderBottom = '';
-        this.style.boxShadow = '';
         
         const rowGroup = this.querySelector('.row-group');
         if (rowGroup) {
           rowGroup.style.background = '';
           rowGroup.style.backdropFilter = '';
           rowGroup.style.webkitBackdropFilter = '';
-          rowGroup.style.borderBottom = '';
-          rowGroup.style.boxShadow = '';
         }
       }
     };

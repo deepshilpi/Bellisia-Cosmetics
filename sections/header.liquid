@@ -491,8 +491,6 @@
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
     }
 
     /* Additional blur for the row-group inside sticky header */
@@ -501,8 +499,6 @@
       background: rgba(255, 255, 255, {{ section.settings.sticky_blur_opacity | divided_by: 100.0 }}) !important;
       backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
       -webkit-backdrop-filter: blur({{ section.settings.sticky_blur_intensity }}px) !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
     }
   {% endif %}
 
