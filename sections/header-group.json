@@ -351,97 +351,13 @@
                 "scheme_border": "#e6e6e6"
               },
               "blocks": {
-                "menu_tab_item_aUDAAR": {
+                "menu_tab_item_rxDBde": {
                   "type": "_menu-tab-item",
-                  "name": "Menu item",
+                  "name": "t:names.menu_item",
                   "settings": {
-                    "title": "Home",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_gFEwXm": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "New In",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_UbTwFE": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "Accessories",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_FiUPrt": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "Shop This Look",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_kUtUi9": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "Blog",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_jPiHNw": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "Buy Theme",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_AJwmMz": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "My Wish List",
+                    "title": "",
                     "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_6rAXjy": {
-                  "type": "_menu-tab-item",
-                  "name": "Menu item",
-                  "settings": {
-                    "title": "My Account",
-                    "link": "https://new-ella-demo-07.myshopify.com/account/login",
-                    "sub_menu": "",
+                    "sub_menu": "main-menu",
                     "image_type_level_1": "image",
                     "svg_upload_level_1": ""
                   },
@@ -449,111 +365,12 @@
                 }
               },
               "block_order": [
-                "menu_tab_item_aUDAAR",
-                "menu_tab_item_gFEwXm",
-                "menu_tab_item_UbTwFE",
-                "menu_tab_item_FiUPrt",
-                "menu_tab_item_kUtUi9",
-                "menu_tab_item_jPiHNw",
-                "menu_tab_item_AJwmMz",
-                "menu_tab_item_6rAXjy"
-              ]
-            },
-            "menu_tab_list_JdVVGD": {
-              "type": "_menu-tab-list",
-              "name": "Menu tab list",
-              "settings": {
-                "tab_for": "Demo",
-                "divider": true,
-                "scheme_border": "#e6e6e6"
-              },
-              "blocks": {
-                "menu_tab_item_PbNVWV": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "Home",
-                    "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_kPjJxE": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "New In",
-                    "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_xPkVWn": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "Accessories",
-                    "link": "#",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_6iPKyd": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "Shop This Look",
-                    "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_arJjWr": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "Blog",
-                    "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                },
-                "menu_tab_item_nfJ6dk": {
-                  "type": "_menu-tab-item",
-                  "name": "t:names.menu_item",
-                  "settings": {
-                    "title": "Buy Theme",
-                    "link": "",
-                    "sub_menu": "",
-                    "image_type_level_1": "image",
-                    "svg_upload_level_1": ""
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "menu_tab_item_PbNVWV",
-                "menu_tab_item_kPjJxE",
-                "menu_tab_item_xPkVWn",
-                "menu_tab_item_6iPKyd",
-                "menu_tab_item_arJjWr",
-                "menu_tab_item_nfJ6dk"
+                "menu_tab_item_rxDBde"
               ]
             }
           },
           "block_order": [
-            "menu_tab_list_FpTJaT",
-            "menu_tab_list_JdVVGD"
+            "menu_tab_list_FpTJaT"
           ]
         }
       },
