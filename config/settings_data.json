@@ -42,7 +42,7 @@
     "buttons_padding_horizontal": 32,
     "buttons_padding_horizontal_mobile": 16,
     "inputs_border_thickness": 1,
-    "inputs_radius": 40,
+    "inputs_radius": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 0,
     "inputs_shadow_blur": 0,
@@ -190,6 +190,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -201,9 +208,9 @@
           "primary_hover": "#000000",
           "border": "#000000",
           "shadow": "#121212",
-          "primary_button_background": "#ffffff",
+          "primary_button_background": "#000000",
           "primary_button_background_gradient": "",
-          "primary_button_text": "#000000",
+          "primary_button_text": "#ffffff",
           "primary_button_border": "#000000",
           "primary_button_hover_background": "#000000",
           "primary_button_hover_background_gradient": "",
@@ -211,8 +218,8 @@
           "primary_button_hover_border": "#000000",
           "secondary_button_background": "#ffffff",
           "secondary_button_background_gradient": "",
-          "secondary_button_text": "#000000",
-          "secondary_button_border": "#000000",
+          "secondary_button_text": "#ffffff",
+          "secondary_button_border": "#ffffff",
           "secondary_button_hover_background": "#ffffff",
           "secondary_button_hover_background_gradient": "",
           "secondary_button_hover_text": "#000000",
