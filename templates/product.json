@@ -31,7 +31,7 @@
             "dot_appearance": false,
             "dot_background": "#ffffff",
             "dot_border_radius": 0,
-            "aspect_ratio": "adapt",
+            "aspect_ratio": "1",
             "constrain_to_viewport": true,
             "media_fit": "cover",
             "media_radius": 0,
@@ -391,11 +391,11 @@
       },
       "settings": {
         "page_width": "custom",
-        "page_width_custom": 1170,
+        "page_width_custom": 1330,
         "desktop_media_position": "left",
         "equal_columns": false,
         "limit_details_width": false,
-        "gap": 60,
+        "gap": 56,
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
