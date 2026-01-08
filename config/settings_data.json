@@ -210,7 +210,7 @@
           "shadow": "#121212",
           "primary_button_background": "#000000",
           "primary_button_background_gradient": "",
-          "primary_button_text": "#ffffff",
+          "primary_button_text": "#000000",
           "primary_button_border": "#000000",
           "primary_button_hover_background": "#000000",
           "primary_button_hover_background_gradient": "",
