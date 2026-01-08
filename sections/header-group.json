@@ -331,19 +331,10 @@
                 "title": "Menu"
               },
               "blocks": {}
-            },
-            "menu_tab_heading_nCEGbq": {
-              "type": "_menu_tab_heading",
-              "name": "Heading",
-              "settings": {
-                "title": "Demo"
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "menu_tab_heading_X7rqfc",
-            "menu_tab_heading_nCEGbq"
+            "menu_tab_heading_X7rqfc"
           ]
         },
         "static-menu-tab-content": {
